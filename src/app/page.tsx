@@ -13,18 +13,20 @@ import {
   ShieldAlert,
   Zap
 } from 'lucide-react';
+import { TrustOSLogo } from '@/components/ui/TrustOSLogo';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-slate-950">
       {/* Navbar */}
       <header className="border-b border-slate-800/80 px-8 py-5 flex items-center justify-between sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
-        <div className="flex items-center space-x-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 shadow-lg shadow-emerald-500/20">
-            <Shield className="w-5 h-5 stroke-[2.5]" />
-          </div>
-          <span className="text-xl font-black font-mono tracking-wider">
-            TRUST<span className="text-emerald-400">OS</span>
+        <div className="flex items-center space-x-4">
+          <Link href="/" className="block">
+            <TrustOSLogo iconClassName="w-9 h-10" textClassName="text-2xl font-black text-white font-sans tracking-wide" />
+          </Link>
+          <span className="hidden md:inline-block h-4 w-px bg-slate-800" />
+          <span className="hidden md:inline-block text-xs font-mono text-slate-400">
+            Developed by <span className="text-emerald-400 font-semibold">CodingTrio</span> — Ishaan, Eshika &amp; Hardik
           </span>
         </div>
 

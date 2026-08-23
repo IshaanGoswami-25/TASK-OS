@@ -3,8 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { TrustOSLogo } from '@/components/ui/TrustOSLogo';
 import { 
-  Shield, 
   LayoutDashboard, 
   Bot, 
   FlaskConical, 
@@ -33,18 +33,10 @@ export const Sidebar: React.FC = () => {
   return (
     <aside className="w-64 bg-slate-950 border-r border-slate-800 flex flex-col h-screen sticky top-0 z-30 shrink-0">
       {/* Brand Header */}
-      <div className="p-6 border-b border-slate-800 flex items-center space-x-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 shadow-lg shadow-emerald-500/20">
-          <Shield className="w-6 h-6 stroke-[2.5]" />
-        </div>
-        <div>
-          <h1 className="text-xl font-black text-slate-100 tracking-wider font-mono">
-            TRUST<span className="text-emerald-400">OS</span>
-          </h1>
-          <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest block font-semibold">
-            AI Crash-Test Engine
-          </span>
-        </div>
+      <div className="p-6 border-b border-slate-800">
+        <Link href="/dashboard" className="block">
+          <TrustOSLogo iconClassName="w-10 h-11" textClassName="text-2xl font-black text-white tracking-wider font-sans" />
+        </Link>
       </div>
 
       {/* Navigation Links */}

@@ -5,7 +5,8 @@ import { useParams } from 'next/navigation';
 import { AgentProfile, AgentVersion, FailureRecord, Scenario, TestExecution, TestRun, TrustScore } from '@/lib/types';
 import { getAgentById, getAgentVersion, getExecutions, getFailuresForTestRun, getScenarios, getTestRunById, getTrustScore } from '@/lib/storage';
 import { getTrustLevel } from '@/lib/scoring';
-import { Shield, Printer, ArrowLeft, CheckCircle2, AlertTriangle, FileText } from 'lucide-react';
+import { TrustOSLogo } from '@/components/ui/TrustOSLogo';
+import { Printer, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 export default function EvaluationReportPage() {
@@ -82,19 +83,7 @@ export default function EvaluationReportPage() {
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-10 space-y-8 shadow-2xl print:bg-white print:text-black print:p-0 print:border-none print:shadow-none">
         {/* Header Branding */}
         <div className="flex items-center justify-between border-b border-slate-800 print:border-gray-200 pb-6">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center font-bold">
-              <Shield className="w-6 h-6" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-black font-mono tracking-wider print:text-black">
-                TRUST<span className="text-emerald-400 print:text-emerald-600">OS</span>
-              </h1>
-              <span className="text-xs font-mono text-slate-400 print:text-gray-500 uppercase block font-semibold">
-                Autonomous AI Agent Reliability Report
-              </span>
-            </div>
-          </div>
+          <TrustOSLogo iconClassName="w-10 h-11" textClassName="text-2xl font-black text-slate-100 print:text-black font-sans tracking-wider" />
 
           <div className="text-right font-mono text-xs text-slate-400 print:text-gray-500">
             <div>Report ID: #{testRun.id.substring(3, 10).toUpperCase()}</div>

@@ -64,6 +64,11 @@ export const Header: React.FC<HeaderProps> = ({ currentAgentId, onSelectAgent })
             {selectedAgent.environment}
           </span>
         )}
+
+        <span className="hidden xl:inline-block h-4 w-px bg-slate-800" />
+        <span className="hidden xl:inline-block text-xs font-mono text-slate-400">
+          Developed by <span className="text-emerald-400 font-semibold">CodingTrio</span> — Ishaan, Eshika &amp; Hardik
+        </span>
       </div>
 
       {/* Quick Action Buttons */}
