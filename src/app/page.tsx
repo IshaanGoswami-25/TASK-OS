@@ -26,7 +26,7 @@ export default function LandingPage() {
           </Link>
           <span className="hidden md:inline-block h-4 w-px bg-slate-800" />
           <span className="hidden md:inline-block text-xs font-mono text-slate-400">
-            Developed by <span className="text-emerald-400 font-semibold">Developer</span> — Ishaan Goswami, PSIT Kanpur
+            Developed by <span className="text-emerald-400 font-semibold">Ishaan Goswami</span> — PSIT Kanpur
           </span>
         </div>
 
